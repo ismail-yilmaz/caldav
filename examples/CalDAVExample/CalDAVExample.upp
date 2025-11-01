@@ -1,0 +1,12 @@
+uses
+	Core,
+	CalDAV;
+
+file
+	CalDAVExample.h,
+	CalDAVExample.cpp,
+	CalDAVHelpers.cpp;
+
+mainconfig
+	"" = "";
+

@@ -1,0 +1,13 @@
+description "CalDAV client-side library for U++\377";
+
+uses
+	WebDAV;
+
+file
+	CalDAV.h,
+	CalDAV.cpp,
+	Docs readonly separator,
+	src.tpp,
+	Info readonly separator,
+	Copying;
+
