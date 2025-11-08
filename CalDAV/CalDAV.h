@@ -12,7 +12,7 @@ public:
 	virtual ~CalDAVRequest();
 	
 	// Non-blocking initializers (use with Do() method)
-	void    StartGetCurrentUserPrincipal();
+	void    StartGetCurrentUserPrincipal(const String& path = Null);
 	void    StartGetCalendarHomeSet(const String& path);
 	void    StartGetCalendars(const String& path);
 	void    StartGetEvents(const String& path, const String& start_time = Null, const String& end_time = Null);
@@ -23,7 +23,7 @@ public:
 	void    StartGetEvent(const String& path);
     
 	// Blocking variants
-	String  GetCurrentUserPrincipal();
+	String  GetCurrentUserPrincipal(const String& path = Null);
 	String  GetCalendarHomeSet(const String& path);
 	String  GetCalendars(const String& path);
 	String  GetEvents(const String& path, const String& start_time = Null, const String& end_time = Null);

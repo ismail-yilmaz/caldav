@@ -92,9 +92,9 @@ CalDAVRequest::~CalDAVRequest()
 {
 }
 
-void CalDAVRequest::StartGetCurrentUserPrincipal()
+void CalDAVRequest::StartGetCurrentUserPrincipal(const String& path)
 {
-	StartPropFind("/", 0, sCurrentUserPrincipalQuery);
+	StartPropFind(Nvl(path, "/"), 0, sCurrentUserPrincipalQuery);
 }
 
 void CalDAVRequest::StartGetCalendarHomeSet(const String& path)
@@ -140,9 +140,9 @@ void CalDAVRequest::StartGetEvent(const String& path)
 	StartLoadFile(path);
 }
 
-String CalDAVRequest::GetCurrentUserPrincipal()
+String CalDAVRequest::GetCurrentUserPrincipal(const String& path)
 {
-	StartGetCurrentUserPrincipal();
+	StartGetCurrentUserPrincipal(path);
 	return Execute();
 }
 

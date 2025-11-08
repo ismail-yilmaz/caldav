@@ -41,11 +41,13 @@ o()] method to drive the operation to completion. Check [^topic`:`/`/Core`/src`/
 sSuccess()] after completion to verify the operation succeeded.&]
 [s3; &]
 [s4; &]
-[s5;:Upp`:`:CalDAVRequest`:`:StartGetCurrentUserPrincipal`(`): [@(0.0.255) void] 
-[* StartGetCurrentUserPrincipal]()&]
+[s5;:Upp`:`:CalDAVRequest`:`:StartGetCurrentUserPrincipal`(const String`&`): [@(0.0.255) v
+oid] [* StartGetCurrentUserPrincipal]([@(0.0.255) const] String[@(0.0.255) `&] 
+[*@3 path] [@(0.0.255) `=] Null)&]
 [s0;l288;%% Starts retrieving the current user principal information 
-for the authenticated user. This is typically required to locate 
-the user’s calendar collections.  [^topic`:`/`/Core`/src`/HttpRequest`_en`-us`#HttpRequest`:`:GetContent`(`)const^ G
+for the authenticated user from the specified [%-*@3 path]. Path 
+can be Null, in that case root path will be used. This is typically 
+required to locate the user’s calendar collections.  [^topic`:`/`/Core`/src`/HttpRequest`_en`-us`#HttpRequest`:`:GetContent`(`)const^ G
 etContent()] method can be used to retrieve the data after a 
 successful completion. Or [^topic`:`/`/Core`/src`/HttpRequest`_en`-us`#HttpRequest`:`:WhenContent^ W
 henContent] event can be used to redirect the output. Note that 
@@ -144,10 +146,13 @@ completes.&]
 [s3; &]
 [s4; &]
 [s5;:Upp`:`:CalDAVRequest`:`:GetCurrentUserPrincipal`(`): String 
-[* GetCurrentUserPrincipal]()&]
-[s2;%% Retrieves the current user principal information for the authenticated 
-user on success. This is typically required to locate the user’s 
-calendar collections.  Note that the result will be in XML format.&]
+[* GetCurrentUserPrincipal]([@(0.0.255) const] String[@(0.0.255) `&] 
+[*@3 path] [@(0.0.255) `=] Null)&]
+[s2;%% Fetches the current user principal information for the authenticated 
+user from the specified [%-*@3 path ]on success. Path can be Null, 
+in that case root path will be used. This is typically required 
+to locate the user’s calendar collections.  Note that the result 
+will be in XML format.&]
 [s3; &]
 [s4; &]
 [s5;:Upp`:`:CalDAVRequest`:`:GetCalendarHomeSet`(const String`&`): String 
